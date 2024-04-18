@@ -1,6 +1,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -14,6 +15,10 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                laravelred: '#F05340',
+                dimgray: '#6C6C6C',
             },
         },
     },

@@ -6,6 +6,7 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/vue3';
+import Toggle from '@/Components/Toggle.vue';
 
 
 import { Switch } from '@headlessui/vue'
@@ -15,11 +16,16 @@ const isDark = useDark();
 const toggleDark = useToggle(isDark)
 
 
+
+
 const message = computed(()=>
     isDark.value ? 'Dark Mode' : 'Light Mode'
 )
 
 const showingNavigationDropdown = ref(false);
+
+
+
 </script>
 
 <template>
@@ -44,12 +50,7 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </NavLink>
-                                <NavLink :href="route('service')" :active="route().current('service')">
-                                    Service
-                                </NavLink>
-                                <NavLink :href="route('lists')" :active="route().current('lists')">
-                                    Lists
-                                </NavLink>
+                              
                                 <NavLink :href="route('game')" :active="route().current('game')">
                                     Game
                                 </NavLink>
@@ -60,6 +61,7 @@ const showingNavigationDropdown = ref(false);
                       <button  @click="toggleDark()" class="text-white bg-black dark:bg-slate-500 dark:text-white">
                         {{ message }}
                         </button>
+                        <!-- <Toggle :isDark /> -->
 
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
                             

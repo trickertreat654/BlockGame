@@ -23,6 +23,9 @@
     "dependencies": {
         "@headlessui/vue": "^1.7.19",
         "@heroicons/vue": "^2.1.3",
-        "@vueuse/core": "^10.9.0"
+        "@tailwindcss/typography": "^0.5.12",
+        "@vueuse/core": "^10.9.0",
+        "html-to-image": "^1.11.11",
+        "vue-markdown-render": "^2.1.1"
     }
 }
