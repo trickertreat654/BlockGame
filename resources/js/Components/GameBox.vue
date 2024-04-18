@@ -24,8 +24,8 @@ onUpdated(() => {
     :class="player ? 'bg-blue-500' : enemy  ? 'bg-red-500' : 
     projectile ? 'bg-green-500' : ''"
     >   
-    {{ playerId }}
-    {{ enemyId }}
+    {{ playerId ? playerId : enemyId ? enemyId : ''}}
+    <!-- {{ enemyId }} -->
     
   </div>
 
