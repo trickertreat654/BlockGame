@@ -24,8 +24,16 @@ onUpdated(() => {
     :class="player ? 'bg-blue-500' : enemy  ? 'bg-red-500' : 
     projectile ? 'bg-green-500' : ''"
     >   
-    {{ playerId ? playerId : enemyId ? enemyId : ''}}
-    <!-- {{ enemyId }} -->
+    
+    <div v-if="player" >
+        {{ playerId }}
+    </div>
+    <div v-else>
+        {{ enemyId }}
+    </div>
+
+        
+
     
   </div>
 
